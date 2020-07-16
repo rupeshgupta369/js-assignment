@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask the user if he is 21+ and log the value "can drink", "cannot drink"</title>
+</head>
+<body>
+    <script>
+            var userName = prompt("Please enter your Name and Surname", "For e.g.:- Rupesh Gupta ")
+            var userAge = confirm( `Are you above 21+, Drinking is prohibited for adults below 22 years old.` )
+
+             document.write(userName + "<br>")
+            //  document.write(userAge + "<br>")
+                if(userAge== true ){
+                    document.write("You can Drink" + "<br>")
+                }else{
+                    document.write("You can NOT Drink" + "<br>")
+                }
+
+           
+
+            
+    </script>
+</body>
+</html>

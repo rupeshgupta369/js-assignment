@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain with examples the remaining method of String and Arrays </title>
+</head>
+<body>
+    <script>
+        // The join() method also joins all array elements into a string.
+         var fruits = ["Banana", "Orange", "Apple", "Mango"];
+         document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+        // The pop() method removes the last element from an array.
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.pop();              // Removes the last element ("Mango") from fruits
+
+        // The pop() method returns the value that was "popped out":
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruits.pop();      // the value of x is "Mango"    
+
+        // The push() method adds a new element to an array (at the end):
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.push("Kiwi");       //  Adds a new element ("Kiwi") to fruits
+
+        // Delete :- JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            delete fruits[0];           // Changes the first element in fruits to undefined
+
+
+        // The splice() method can be used to add new items to an array:    
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.splice(2, 0, "Lemon", "Kiwi");
+
+        // The slice() method slices out a piece of an array into a new array.
+            var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            var citrus = fruits.slice(1);
+
+
+                /*STRINGS*/
+
+        // The search() method searches a string for a specified value and returns the position of the match:
+             var str = "Please locate where 'locate' occurs!";
+             var pos = str.search("locate");
+
+        // slice() extracts a part of a string and returns the extracted part in a new string.
+        // The method takes 2 parameters: the start position, and the end position(end not included).
+            var str = "Apple, Banana, Kiwi";
+            var res = str.slice(7, 13);
+
+        // substring() is similar to slice().
+        // The difference is that substring() cannot accept negative indexes.
+            var str = "Apple, Banana, Kiwi";
+            var res = str.substring(7, 13);
+
+        // substr() is similar to slice().
+        // The difference is that the second parameter specifies the length of the extracted part.
+            var str = "Apple, Banana, Kiwi";
+            var res = str.substr(7, 6);
+
+        // The replace() method replaces a specified value with another value in a string:
+            str = "Please visit Microsoft!";
+            var n = str.replace("Microsoft", "W3Schools");
+
+
+        // The trim() method removes whitespace from both sides of a string:
+            var str = "       Hello World!        ";
+            alert(str.trim());
+    </script>    
+</body>
+</html>
