@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <h2>1. Take a number from a user and write a function which checks whether the number is even or
+    odd. Assign the result to a variable and log that variable in the console.
+    
+    <p>Example Input: 23
+    Output: The number entered is 23 and Number is odd
+    Question</p>
+
+    </h2>
+</head>
+<body>
+    <h4>Output</h4>
+    <script>    
+        let NumFromUser = prompt("Please add a number")
+
+        let rupesh = function(NumArg){
+            if (NumArg % 2  == 0) {
+                document.write(`The Number entered is ${NumArg} and Number is EVEN`);
+                console.log(`The Number entered is ${NumArg} and Number is EVEN`);
+                
+            } else {
+                document.write(`The Number entered is ${NumArg} and Number is ODD`);
+                console.log(`The Number entered is ${NumArg} and Number is ODD`);
+                
+            }
+        }
+        rupesh(NumFromUser);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <h2>3. Write a program to take marks as input from the user and grade him accordingly. Use Conditional
+    statements. Also the same code using switch or ternary
+        <p> Example Input: 50
+           Output : Marks are 50 and grade is B
+        </p>
+    </h2>
+</head>
+
+<body>
+    <h4>Output</h4>
+    <script>
+        let marksInput = prompt("Please add the marks which you got.")  
+        
+        if(marksInput >=75 && marksInput < 100){
+            console.log("Congrats you got DISTINCTION");
+            document.write("Congrats you got DISTINCTION");
+        }
+        else if(marksInput >= 60 && marksInput < 75){
+            console.log("Congrats you got grade A");
+            document.write("Congrats you got grade A");
+
+        }
+        else if (marksInput >= 50 && marksInput < 60) {
+            console.log("Congrats you got grade B");
+            document.write("Congrats you got grade B");
+            
+        }
+         else if (marksInput >= 35 && marksInput < 50) {
+            console.log("Congrats you got grade c");
+            document.write("Congrats you got grade c");
+            
+        }
+        else if (marksInput >= 0 && marksInput < 35) {
+            console.log("SORRY you are fail, Please take a next attempt.");
+            document.write("SORRY you are fail, Please take a next attempt.");
+            
+        }
+        else
+        {   (marksInput < 0 && marksInput > 100) 
+            console.log("You entered INVALID marks");
+            document.write("You entered INVALID marks");
+        }
+    </script>
+</body>
+
+</html>

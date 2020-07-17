@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <h2>2. Write a program which will take OS name and version from the user separated by a space. Then
+    log the OS name and version on the console.
+        <p>Example Input: "Android 9"
+        Output: The OS name is Android and version is 9</p>
+</h2>
+</head>
+<body>
+    <h4>Output</h4>
+    <script>
+       
+        let osVersion = prompt("Please enter your OS name and Version separated by a space.").split(" ");
+
+        document.write(`The OS name is ${osVersion[0]} and version is ${osVersion[1]}`)
+        
+        console.log(`The OS name is ${osVersion[0]} and version is ${osVersion[1]}`)
+
+    </script>
+</body>
+</html>
