@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <h2>Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division,
+    Square root, Percentage.</h2>
+</head>
+<body>
+    <h3>Output</h3>
+    <script>
+        let firstNum = prompt("Add First Number");
+        let secondNum = prompt("Add Second Number");
+        let choose = prompt(`Please choose 1 for Additon,
+                        2 for Subtraction,
+                        3 for Multiplication,
+                        4 for Division,
+                        5 for Square Root and 
+                        6 for Percentage.`)
+
+
+
+        //Additon
+        let addition = function(num1, num2){
+            return (+num1 + +num2);
+        }
+        let add = addition(firstNum, secondNum)
+        console.log(add);
+
+        //Subtraction
+        let subtraction = function (num1, num2) {
+            return (num1 - num2);
+        }
+        let sub = subtraction(firstNum, secondNum)
+        console.log(sub);
+
+        //Multiplication
+        let multiplication = function (num1, num2) {
+            return (num1 * num2);
+        }
+        let mul = multiplication(firstNum, secondNum)
+        console.log(mul);
+
+        //Division
+        let division = function (num1, num2) {
+            return (num1 / num2);
+        }
+        let div = division(firstNum, secondNum)
+        console.log(div);
+
+        //Square Root
+        let sqRoot = function (num1, num2) {
+            return  Math.sqrt(num1)
+        }
+        let sqr = sqRoot(firstNum, secondNum)
+        console.log(sqr);
+
+        //Percentage
+        let percentage = function (num1,perValue) {
+            return ((num1/100)*perValue);
+        }
+        let per = percentage(firstNum, secondNum)
+        console.log(per);
+
+        switch (choose) {
+            
+            case 1:
+                    console.log(add);
+        
+                break;
+
+            case 2:
+                    console.log(sub);
+
+                break;
+
+                case 3:
+                    console.log(mul);
+
+                break;
+
+                case 4:
+                    console.log(div);
+
+                break;
+
+                case 5:
+                    console.log(sqr);
+
+                break;
+
+                case 6:
+                    console.log(per);
+        
+                break;
+            default:
+                console.log("Please enter valid number");
+                break;
+        }
+    </script>
+</body>
+</html>

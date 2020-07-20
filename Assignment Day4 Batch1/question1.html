@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <h2>Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and
+    "fizzbuzz" at multiples of 3 and 5.</h2>
+</head>
+<body>
+    <h3>Output</h3>
+    <script>
+         for(let i=1; i <=100 ; i++ ){
+            if(i%3 == 0 && i%5 == 0){
+                console.log("fizzbuzz");
+                document.write("fizzbuzz" + "<br>")
+            }
+            else if(i % 3 == 0){
+                console.log("fizz");
+                document.write("fizz" + "<br>")
+            }
+            else if(i % 5 == 0){
+                console.log("buzz");
+                document.write("buzz" + "<br>")
+            }
+            else{
+                console.log(i);
+                document.write(i + "<br>")
+            }
+        } 
+        
+      /*  
+            // DOUBT
+            for (var i = 1; i <= 100; i++) {
+            var f = i % 3 == 0, b = i % 5 == 0;
+            console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
+        }
+         */
+      
+    </script>
+</body>
+</html>
