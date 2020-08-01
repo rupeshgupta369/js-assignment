@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('4.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <h1>Set timer &#x23F2</h1>
+    <input id='h' placeholder='hours' style="width: 50px"><input id='m' placeholder='minutes' style="width: 60px"><input
+        id='s' placeholder='seconds' style="width: 60px">
+    <button onclick="values()">Start</button>
+    <h2 id='p'></h2>
+    <mark id='p2'></mark>
+
+    <script>
+        function values() {
+                let h = Number(document.getElementById('h').value);
+                let m = Number(document.getElementById('m').value);
+                let s = Number(document.getElementById('s').value);
+                let t = h * 3600 + m * 60 + s;
+                function timer() {
+                    document.getElementById('p').innerHTML = 'Time Left(seconds) : ' + t;
+                    document.getElementById('p2').innerHTML = 'Please reload the page to reset the timer.';
+                    if (t == 0) {
+                        document.getElementById('p').innerHTML = '<h2 style="color:red">Timeout</h2>';
+                        alert(`Timeout...!${String.fromCodePoint(0x231B)} \nPlease reload the page`);
+                    }
+                    else if (t > 0) {
+                        t = t - 1;
+                    }
+
+                }
+                setInterval(timer, 1000);
+            }
+    </script>
+
+</body>
+
+</html>

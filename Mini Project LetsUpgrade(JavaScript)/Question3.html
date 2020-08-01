@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Quote Generator</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('lotus.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .button {
+            border: none;
+            color: whiblackte;
+            padding: 20px 25px;
+            font-size: 26px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .button1 {
+            background-color: #29e5bf;
+        }
+    </style>
+
+    <!-- <button type="button" id="quote">Generate a new quote</button> -->
+    <button class="button button1" id="quote">Generate a new quote</button>
+    <h1 id='p' style="color: black;"></h1>
+    <script>
+        const newQuoteButton = document.querySelector('#quote');
+        newQuoteButton.addEventListener('click', getQuote);
+
+        const endpoint = 'http://quotes.stormconsultancy.co.uk/random.json'
+
+        async function getQuote() {
+            try {
+                const response = await fetch(endpoint)
+                if (!response.ok) {
+                    throw Error(response.statusText)
+                }
+                let json = await response.json();
+                displayQuote(json.quote);
+            } catch (err) {
+                console.log(err)
+                alert('Failed to fetch new quote');
+            }
+        }
+
+        function displayQuote(quote) {
+            document.getElementById('p').innerHTML = '"' + quote + '"';
+        }
+    </script>
+
+
+</body>
+
+</html>
